@@ -23,9 +23,22 @@ module.exports = {
 
   operation: {
     inputFields: [
-      {key: 'repo', label:'Repo', required: true, dynamic: 'repo.full_name.full_name'},
-      {key: 'title', label:'Title', required: true},
-      {key: 'body', label:'Body', required: false}
+      {
+        key: 'repo',
+        label: 'Repo',
+        required: true,
+        dynamic: 'repo.full_name.full_name'
+      },
+      {
+        key: 'title',
+        label: 'Title',
+        required: true
+      },
+      {
+        key: 'body',
+        label: 'Body',
+        required: false
+      }
     ],
     perform: createIssue,
     sample: sample
